@@ -26,7 +26,18 @@ export default function Register() {
       <p className="auth-subtitle">Your movie collections will be saved securely with your account.</p>
       <form onSubmit={submit}>
         <label>Name<input name="name" value={form.name} onChange={change} placeholder="Your name" required /></label>
-        <label>Username<input name="username" value={form.username} onChange={change} placeholder="Enter your username" minLength="3" required /></label>
+       <label>
+  Username
+  <input
+    name="username"
+    value={form.username}
+    onChange={change}
+    placeholder="ENTER YOUR USERNAME HERE"
+    autoComplete="off"
+    minLength="3"
+    required
+  />
+</label>
         <label>Email<input name="email" type="email" value={form.email} onChange={change} placeholder="you@example.com" required /></label>
         <label>Password<input name="password" type="password" value={form.password} onChange={change} placeholder="At least 6 characters" minLength="6" required /></label>
         {error && <p className="form-error">{error}</p>}
